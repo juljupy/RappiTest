@@ -10,7 +10,7 @@
 | to using a Closure or controller method. Build something great!
 |
 */
-
+Route::post('/evaluatematrix','Matrix3DController@evaluate');
 Route::get('/', function () {
-    return view('welcome');
+    return view('mainapp');
 });
