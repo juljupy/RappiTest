@@ -36,27 +36,12 @@
                             <label for="name" class="col-md-1 control-label">Operations:</label>
 
                             <div class="col-md-12">
-                                <textarea rows="12" class="form-control" style="min-width: 100%" name="operations"></textarea>
+                                <textarea rows="12" class="form-control" style="min-width: 100%" name="cases"></textarea>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">
                             Evaluate
                         </button>
-                        @if($results = json_decode(Session::get('results')))
-                            @if( $results->status === true )
-                                <div class="alert alert-success">
-                                @foreach( $results->results as $result)
-                                    @foreach($result as $res)
-                                        {{$res}}<br>
-                                    @endforeach
-                                @endforeach
-                                </div>
-                            @else
-                                <div class="alert alert-danger">
-                                    Error on operations
-                                </div>
-                            @endif
-                        @endif
                     </form>
                 </div>
             </div>
